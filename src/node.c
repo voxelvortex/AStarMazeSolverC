@@ -1,10 +1,5 @@
-#include "location.h"
+#include "node.h"
 #include "utils.h"
-
-typedef struct{
-    location loc;
-    float weight;
-} node;
 
 bool compare_nodes(node a, node b){
     return a.weight - b.weight;
