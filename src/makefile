@@ -2,7 +2,7 @@ CC = gcc
 CFLAGS = -Wall -Wextra -O2
 
 TARGET = AStarSolver
-SOURCES = main.c
+SOURCES = utils.c location.c node.c main.c
 OBJECTS = $(SOURCES:.c=.o)
 
 all: AStarSolver
