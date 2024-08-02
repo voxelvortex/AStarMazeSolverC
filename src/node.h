@@ -4,11 +4,11 @@
 
 typedef struct{
     location loc;
-    float weight;
+    int weight;
 } node;
 
 bool compare_nodes(node a, node b);
 
-void set_node_weight(node n, location start, location end);
+node set_node_weight(node n, location start, location end);
 
 #endif

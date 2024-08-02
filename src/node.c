@@ -1,13 +1,16 @@
 #include "node.h"
-#include "utils.h"
+#include <stdio.h>
+#include <stdlib.h>
 
 bool compare_nodes(node a, node b){
-    return a.weight - b.weight;
+    return a.weight > b.weight;
 }
 
-void set_node_weight(node n, location start, location end){
-    int deltaEnd = abs( n.loc.row - end.row ) + abs( n.loc.col - end.col );
-    int deltaStart = abs( n.loc.row - start.row ) + abs( n.loc.col - start.col );
-    n.weight = deltaEnd + deltaStart;
+node set_node_weight(node n, location start, location end){
+    int start_delta = abs( n.loc.row - start.row ) + abs( n.loc.col - start.col );
+    int end_delta = abs( n.loc.row - end.row ) + abs( n.loc.col - end.col );
+
+    n.weight = end_delta + start_delta;
+    return n;
 }
 
