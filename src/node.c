@@ -14,3 +14,12 @@ node set_node_weight(node n, location start, location end){
     return n;
 }
 
+nodelist* insert_before(nodelist* nl, node n){
+    //TODO
+    return nl;
+}
+nodelist* insert_after(nodelist* nl, node n){
+    //TODO
+    return nl;
+}
+
