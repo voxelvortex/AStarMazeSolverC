@@ -7,8 +7,15 @@ typedef struct{
     int weight;
 } node;
 
-bool compare_nodes(node a, node b);
+typedef struct nodelist {
+    int value;
+    struct nodelist* next;
+} nodelist;
 
+
+bool compare_nodes(node a, node b);
 node set_node_weight(node n, location start, location end);
+nodelist* insert_before(nodelist* nl, node n);
+nodelist* insert_after(nodelist* nl, node n);
 
 #endif
