@@ -1,4 +1,6 @@
 #include "utils.h"
+
 int abs(int i){
-    return (i ^ (i >> 31)) - (i >> 31);
+    int bits = sizeof(i)*8;
+    return (i ^ (i >> (bits-1))) - (i >> (bits-1));
 }
